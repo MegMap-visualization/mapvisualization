@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "megmap-viz"
+version = "0.1.0"
+description = "MegMap Visualization Backend"
+authors = ["chenjunjie <chenjunjie@megvii.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Flask = "2.3.2"
+Flask-Cors = "4.0.0"
+lxml = "^4.9.3"
+lxml-stubs = "0.4.0"
+utm = "^0.7.0"
+requests = "^2.31.0"
+refile = "7.2.0"
+gunicorn = "^21.2.0"
+kcangnacos = "^1.7"
+numpy = "^1.25.2"
+portalocker = "^2.7.0"
+pyproj = "^3.6.0"
+geopandas = "^0.13.2"
+pyogrio = "^0.6.0"
+pyarrow = "^13.0.0"
+celery = { extras = ["redis"], version = "^5.3.4" }
+
+
+[tool.poetry.group.dev.dependencies]
+black = "23.7.0"
+flake8 = "6.1.0"
+pytest = "7.4.1"
+isort = "5.12.0"
+mypy = "1.4.1"
+
+
+[[tool.poetry.source]]
+name = "megvii"
+url = "http://pypi.i.brainpp.cn/brain/dev/+simple/"
+priority = "supplemental"
+
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "http://mirrors.i.brainpp.cn/pypi/simple/"
+priority = "primary"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[tool.black]
+line-length = 79
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

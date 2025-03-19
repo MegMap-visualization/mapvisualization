@@ -1,0 +1,28 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/__pycache__": true
+    },
+    "explorerExclude.backup": {},
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}"
+    ],
+    "python.testing.pytestArgs": [
+        "${workspaceFolder}/megmap_viz",
+        "-s"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "commentTranslate.source": "Google",
+    "gitlens.remotes": [
+        {
+            "domain": "git-core.megvii-inc.com",
+            "type": "GitLab"
+        }
+    ]
+}
